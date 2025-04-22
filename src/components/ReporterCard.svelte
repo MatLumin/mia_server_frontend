@@ -1,5 +1,6 @@
 <script>
 import {current_surname} from "../stores/current_surname.js";
+import FlashingText from "./FlashingText.svelte";
 
 let {surname} = $props();
 let additional_css_class = $state("");
@@ -15,8 +16,11 @@ async function the_troubled_mark_things()
         troubled_class = "reporter_card_troubled";
         troubled_mark = "⚠️"
     }
+    else 
+    {
     troubled_class = "";
-    troubled_mark = ""    
+    troubled_mark = "";   
+    }
 }
 
 current_surname.subscribe
@@ -45,5 +49,8 @@ function declare_self_as_selected()
 </script>
 
 
-<div class="reporter_card {additional_css_class} {troubled_class}" onclick={declare_self_as_selected}>{surname} {troubled_mark}</div>
+<div class="reporter_card {additional_css_class} {troubled_class}" onclick={declare_self_as_selected}>
+    {surname}
+    <FlashingText duration={500}>{troubled_mark}</FlashingText>
+</div>
 

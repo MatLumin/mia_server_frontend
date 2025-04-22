@@ -51,13 +51,6 @@
 	{
 	}
 
-.scat_div
-	{
-	display: grid;
-
-	grid-template-rows: 3fr 3fr 3fr;
-	grid-template-columns: 3fr 3fr 3fr;
-	}
 
 
 .general_border
@@ -91,7 +84,7 @@
 
 .reporters_list
 	{
-	width: 18vw;
+	width: 20vw;
 	align-items: start;
 	}
 
@@ -112,15 +105,14 @@
 	{
 	background-color: white;
 	color: black;
-	transform: translateX(1vh);
+	transform: translateX(4vh);
 	transition: 0.2s;
 	}
 
 
 .reporter_card_troubled
 	{
-	background-color: !important hsl(353, 83%, 68%);
-	color:!important black;
+	color: hsl(353, 83%, 68%) !important;
 	}
 
 
@@ -145,8 +137,20 @@
 
 .message_card
 	{
+	font-size: small;
+
 	}
 
+.scaleup_on_hover
+	{
+	transition: 0.1s;
+	}
+
+.scaleup_on_hover:hover
+	{
+	transform: scale(1.1);
+	transition:0.1s;
+	}
 
 
 

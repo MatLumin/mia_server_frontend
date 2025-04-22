@@ -44,7 +44,6 @@ onMount
         group_portion={agent_data["group_portion"]}
         current_message_id={agent_data["current_message_id"]}
         current_group_username={agent_data["current_group_username"]}
-        sending_report={agent_data["sending_report"]}
         ></AgentCard>
     {/each}
 </div>
